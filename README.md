@@ -1,2 +1,2 @@
-# Rock-Paper_scissors-v2
+# Rock-Paper-Scissors-v2
 Rock paper scissors game made with no help
