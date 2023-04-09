@@ -9,7 +9,6 @@
     display: flex;
     justify-content: center;
     gap: 25px;
-    border: 1px solid black;
 }
 
 .results{
