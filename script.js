@@ -57,13 +57,18 @@ function playRound(playerSelection, computerSelection){
     score.textContent = ("Players score: " + playerScore + " Computers score " + computerScore)
     
     currentResult.textContent = (result)
- if(playerScore === 5){
- alert("Player 1 is the winner")
- } else if (computerScore === 5){
-    alert("The computer winner")
- }
+if (playerScore === 5){
+    alert("You win");
+    reset()
+} else if (computerScore === 5){
+    alert("The computer wins");
+    reset();
 }
-
+}
+function reset (){
+    playerScore = 0;
+    computerScore = 0;
+}
 
 // function that creates a random choice 
 function getComputerChoice(){
