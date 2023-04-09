@@ -1,10 +1,22 @@
+//variables to get the divs to display the results on the page
+const selectedWeapons = document.querySelector(".selectedWeapons");
+const score = document.querySelector(".score");
+const currentResult = document.querySelector(".currentResult");
+
+
+
+
+// variables for the score of the game
 let playerScore = 0
 let computerScore = 0
 
+// Variables to select buttons
 const rock = document.querySelector('#rockbtn');
 const paper = document.querySelector('#paperbtn');
 const scissors = document.querySelector('#scissorsbtn')
 
+
+// event listeners for each of the buttons
 rock.addEventListener("click", function(){
     playRound('rock', getComputerChoice());
 })
@@ -16,6 +28,7 @@ scissors.addEventListener("click", function(){
     playRound('scissors', getComputerChoice());
 });
 
+// function that takes in parameters of player selection and random computer selection
 
 function playRound(playerSelection, computerSelection){
     if (playerSelection === computerSelection){
@@ -39,16 +52,16 @@ function playRound(playerSelection, computerSelection){
         computerScore++
         result = ("You lose! Scissors beats Paper");
     }
-    console.log("Player selected: " + playerSelection + " Computer selected: " + computerSelection)
+    selectedWeapons.textContent = ("Player selected: " + playerSelection + " Computer selected: " + computerSelection)
     
-    console.log(playerScore, computerScore)
+    score.textContent = ("Players score: " + playerScore + " Computers score " + computerScore)
     
-    console.log(result)
+    currentResult.textContent = (result)
  
 }
 
 
-
+// function that creates a random choice 
 function getComputerChoice(){
     const choicesArr = ["rock", "paper", "scissors"];
     const randomChoice = choicesArr[Math.floor(Math.random() * choicesArr.length)];
@@ -60,28 +73,7 @@ function getComputerChoice(){
 
 
 
-// console.log(playRound());
 
-
-
-// function game(){
-//     // for (let i = 1; i<=5; i++)
-//     {
-            
-//             // const playerSelection = prompt("Pick from Rock, Paper or Scissors")
-
-//         console.log(playRound(playerSelection, computerSelection))
-    
-//         console.log(playerScore, computerScore)
-// }
-// if (playerScore>computerScore){
-//     return "You beat the comp"
-// } else if (playerScore< computerScore){
-//     return "Comp beat you"
-// } else {
-// return "Draw"
-// }
-// }
 
 
 

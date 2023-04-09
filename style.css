@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.buttonHolder{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    border: 1px solid black;
+}
+
+.results{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
