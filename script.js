@@ -57,7 +57,11 @@ function playRound(playerSelection, computerSelection){
     score.textContent = ("Players score: " + playerScore + " Computers score " + computerScore)
     
     currentResult.textContent = (result)
- 
+ if(playerScore === 5){
+ alert("Player 1 is the winner")
+ } else if (computerScore === 5){
+    alert("The computer winner")
+ }
 }
 
 
